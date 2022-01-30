@@ -1111,7 +1111,7 @@ tech_eutab_cosmic_whole = {
 	# weight_modifier = {
 		# modifier = {
 			# factor = 0
-			# NOT = { eu_has_wonders = yes }
+			# eu_has_wonders = no
 		# }
 		# modifier = {
 			# factor = 1.25

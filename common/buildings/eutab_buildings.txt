@@ -91,8 +91,10 @@ building_eutab_support_lab = {
 	category = research
 
 	potential = {
-		NOT = { has_modifier = resort_colony }	
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
 	}
 
 	allow = {
@@ -299,8 +301,10 @@ building_eutab_gaia_district = {
 	category = amenity
 	
 	potential = {
-		NOT = { is_planet_class = pc_habitat }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			is_planet_class = pc_habitat
+			has_modifier = slave_colony
+		}
 		owner = { 
 			is_regular_empire = yes
 			NOT = { has_valid_civic = civic_shared_burden }
@@ -333,7 +337,7 @@ building_eutab_gaia_district = {
 		potential = {
 			exists = owner
 			owner = {
-				has_non_swapped_tradition = tr_domination_imperious_architecture
+				has_active_tradition = tr_domination_imperious_architecture
 			}					
 		}
 		modifier = {
@@ -1277,7 +1281,7 @@ building_eutab_expo_guard = {
 	# }
 	
 	# potential = {
-		# owner = { has_swapped_tradition = tr_purity_symbol_purity }
+		# owner = { has_active_tradition = tr_purity_symbol_purity }
 	# }
 	
 	# allow = {
@@ -1296,7 +1300,7 @@ building_eutab_expo_guard = {
 	
 	# destroy_if = {
 		# exists = owner
-		# owner = { NOT = { eu_req_xpho = yes } }
+		# owner = { eu_req_xpho = no }
 	# }
 	
 	# prerequisites = {
@@ -1345,7 +1349,7 @@ building_eutab_xeno_district = {
 		potential = {
 			exists = owner
 			owner = {
-				has_non_swapped_tradition = tr_domination_imperious_architecture
+				has_active_tradition = tr_domination_imperious_architecture
 			}					
 		}
 		modifier = {
@@ -1677,8 +1681,10 @@ building_eutab_genetic_data_vault = {
 	category = research
 
 	potential = {
-		NOT = { has_modifier = resort_colony }	
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
 		exists = owner
 		owner = { has_ethic = ethic_fanatic_pacifist }
 	}
@@ -1687,8 +1693,10 @@ building_eutab_genetic_data_vault = {
 		exists = owner
 		OR = {
 			NOR = {
-				NOT = { has_modifier = resort_colony }	
-				NOT = { has_modifier = slave_colony }
+				NOR = {
+					has_modifier = resort_colony
+					has_modifier = slave_colony
+				}
 				owner = { is_gestalt = yes }
 			}
 			AND = {
@@ -1767,8 +1775,10 @@ building_eutab_afterlife_vault = {
 	category = research
 
 	potential = {
-		NOT = { has_modifier = resort_colony }	
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
 		exists = owner
 		owner = { has_ethic = ethic_fanatic_pacifist }
 	}
@@ -1777,8 +1787,10 @@ building_eutab_afterlife_vault = {
 		exists = owner
 		OR = {
 			NOR = {
-				NOT = { has_modifier = resort_colony }	
-				NOT = { has_modifier = slave_colony }
+				NOR = {
+					has_modifier = resort_colony
+					has_modifier = slave_colony
+				}
 				owner = { is_gestalt = yes }
 			}
 			AND = {
@@ -1879,7 +1891,7 @@ building_eutab_arcology = {
 		potential = {
 			exists = owner
 			owner = {
-				has_non_swapped_tradition = tr_domination_imperious_architecture
+				has_active_tradition = tr_domination_imperious_architecture
 			}					
 		}
 		modifier = {
@@ -1959,7 +1971,7 @@ building_eutab_comp_arcology = {
 		potential = {
 			exists = owner
 			owner = {
-				has_non_swapped_tradition = tr_domination_imperious_architecture
+				has_active_tradition = tr_domination_imperious_architecture
 			}					
 		}
 		modifier = {
@@ -2249,10 +2261,7 @@ building_eutab_hive_alpha_node = {
 		AND = {
 			owner = { has_authority = auth_hive_mind }
 			num_pops >= 60
-			NOR = {
-				is_planet_class = pc_habitat
-				is_planet_class = pc_ringworld_habitable
-			}
+			is_artificial = no
 		}
 	}
 	
@@ -2720,7 +2729,7 @@ building_eutab_preservation_nexus = {
 		potential = {
 			exists = owner
 			owner = {
-				has_swapped_tradition = tr_domination_modular_depot
+				has_active_tradition = tr_domination_modular_depot
 			}					
 		}
 		modifier = {
@@ -2732,7 +2741,7 @@ building_eutab_preservation_nexus = {
 		potential = {
 			exists = owner
 			owner = {
-				has_swapped_tradition = tr_synchronicity_integrated_preservation
+				has_active_tradition = tr_synchronicity_integrated_preservation
 			}					
 		}
 		modifier = {

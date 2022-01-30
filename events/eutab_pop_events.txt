@@ -7,11 +7,11 @@
 	# is_triggered_only = yes
 	
 	# immediate = {
-		# every_pop = {
+		# every_owned_pop = {
 			# limit = {
 				# exists = planet
 				# planet = {
-					# any_pop = {
+					# any_owned_pop = {
 						# is_same_species = prevprev
 						# pop_has_trait = trait_eutab_robot_self_replicating
 						# is_growing = no
@@ -25,7 +25,7 @@
 				# days = 89
 			# }
 			# planet = {
-				# random_pop = {
+				# random_owned_pop = {
 					# limit = {
 						# is_same_species = prevprev
 						# pop_has_trait = trait_eutab_robot_self_replicating

@@ -550,7 +550,7 @@ tech_eutab_h_nav_drones = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { eu_has_wonders = yes }
+			eu_has_wonders = no
 		}
 		modifier = {
 			factor = 1.25

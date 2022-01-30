@@ -112,7 +112,7 @@ tech_eutab_xeno_adaptation = {
 		# }
 		# modifier = {
 			# factor = 0
-			# NOT = { has_swapped_tradition = tr_purity_symbol_purity }
+			# NOT = { has_active_tradition = tr_purity_symbol_purity }
 		# }
 	# }
 	

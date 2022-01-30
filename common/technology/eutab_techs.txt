@@ -104,13 +104,11 @@ tech_eutab_support_lab = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				OR = {
+			NOR = {
 					eu_has_wonders = yes
 					has_ascension_perk = ap_voidborn
 					has_ascension_perk = ap_enigmatic_engineering
-				}
-			}
+}
 		}
 		modifier = {
 			factor = 1.25
@@ -205,20 +203,15 @@ tech_eutab_battle_praxeum = {
 	weight_modifier = {
 	modifier = {
 			factor = 0
-			NOT = {
-				OR = {
+			NOR = {
 					has_ascension_perk = ap_galactic_force_projection
 					has_ascension_perk = ap_defender_of_the_galaxy
 					has_ascension_perk = ap_galactic_contender
-				}
-			}
+}
 		}
 		modifier = {
 			factor = 3
-			OR = {
-				has_ethic = ethic_militarist
-				has_ethic = ethic_fanatic_militarist
-			}
+			is_militarist = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -245,10 +238,7 @@ tech_eutab_battle_praxeum = {
 		}
 		modifier = {
 			factor = 3
-			OR = {
-				has_ethic = ethic_militarist
-				has_ethic = ethic_fanatic_militarist
-			}
+			is_militarist = yes
 		}
 	}
 }
@@ -344,11 +334,9 @@ tech_eutab_foundation_institute = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				AND = {
-					has_ascension_perk = ap_technological_ascendancy
-					has_tradition = tr_discovery_finish
-				}
+			NAND = {
+				has_ascension_perk = ap_technological_ascendancy
+				has_tradition = tr_discovery_finish
 			}
 		}
 		modifier = {
@@ -538,12 +526,10 @@ tech_eutab_failsafe_alert = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				OR = {
+			NOR = {
 					has_ascension_perk = ap_defender_of_the_galaxy
 					has_ascension_perk = ap_galactic_force_projection
-				}
-			}
+}
 		}
 		modifier = {
 			factor = 1.25
@@ -587,12 +573,10 @@ tech_eutab_natural_fort = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				OR = {
+			NOR = {
 					has_ascension_perk = ap_defender_of_the_galaxy
 					has_ascension_perk = ap_galactic_contender
-				}
-			}
+}
 		}
 		modifier = {
 			factor = 1.25
@@ -633,14 +617,10 @@ tech_eutab_street_judge = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				OR = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-				}
-			}
+			NOR = {
+					is_militarist = yes
+					is_authoritarian = yes
+}
 		}
 		modifier = {
 			factor = 1.25
@@ -684,14 +664,12 @@ tech_eutab_feed_forges = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				OR = {
+			NOR = {
 					has_ascension_perk = ap_arcology_project
 					has_ascension_perk = ap_machine_worlds
 					has_ascension_perk = ap_hive_worlds
 					has_ascension_perk = ap_galactic_contender
-				}
-			}
+}
 		}
 		modifier = {
 			factor = 1.25
@@ -735,14 +713,12 @@ tech_eutab_city_fabricators = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				OR = {
+			NOR = {
 					has_ascension_perk = ap_arcology_project
 					has_ascension_perk = ap_machine_worlds
 					has_ascension_perk = ap_hive_worlds
 					has_ascension_perk = ap_master_builders
-				}
-			}
+}
 		}
 		modifier = {
 			factor = 1.25
@@ -784,12 +760,10 @@ tech_eutab_sustainable_architecture = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				OR = {
+			NOR = {
 					has_ascension_perk = ap_mastery_of_nature
 					has_ascension_perk = ap_master_builders
-				}
-			}
+}
 		}
 		modifier = {
 			factor = 1.25
@@ -830,12 +804,10 @@ tech_eutab_refiner_1 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = {
-				OR = {
+			NOR = {
 					has_ascension_perk = ap_technological_ascendancy
 					has_ascension_perk = ap_enigmatic_engineering
-				}
-			}
+}
 		}
 		modifier = {
 			factor = 1.25
@@ -876,11 +848,9 @@ tech_eutab_refiner_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = {
-				AND = {
-					has_ascension_perk = ap_technological_ascendancy
-					has_ascension_perk = ap_enigmatic_engineering
-				}
+			NAND = {
+				has_ascension_perk = ap_technological_ascendancy
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -922,11 +892,9 @@ tech_eutab_act_on_instinct = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = {
-				AND = {
-					has_ascension_perk = ap_technological_ascendancy
-					has_ascension_perk = ap_enigmatic_engineering
-				}
+			NAND = {
+				has_ascension_perk = ap_technological_ascendancy
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -1319,8 +1287,8 @@ tech_eutab_solar_tracker = {
 				# AND = {
 					# OR = {
 						# has_tradition = tr_prosperity_finish
-						# has_swapped_tradition = tr_prosperity_finish_machine
-						# has_swapped_tradition = tr_prosperity_finish_hive
+						# has_active_tradition = tr_prosperity_finish_machine
+						# has_active_tradition = tr_prosperity_finish_hive
 					# }
 					# has_ascension_perk = ap_voidborn
 				# }
